@@ -16,6 +16,10 @@ RUN yarn build
 
 FROM node:18.8-alpine
 
+ARG SECRET_KEY
+
+ENV PAYLOAD_SECRET=${SECRET_KEY}
+
 WORKDIR /home/node/app/
 
 COPY --from=builder /home/node/app/ /home/node/app/
