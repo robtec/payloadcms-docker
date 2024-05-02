@@ -26,6 +26,6 @@ jobs:
     - name: Build the Docker image
       run: |
         
-        docker build . --file Dockerfile --tag robtec/payloadcms-blank:latest
+        docker build . --file Dockerfile --build-arg SECRET_KET=oeinrcoencioenc --tag robtec/payloadcms-blank:latest
 
         docker push robtec/payloadcms-blank:latest
