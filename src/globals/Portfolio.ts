@@ -15,7 +15,7 @@ const Portfolio: GlobalConfig = {
 			fields: [
 				{
 					name: "name",
-					label: "Nome",
+					label: "Name",
 					type: "text",
 					admin: {
 						width: "50%",
@@ -24,7 +24,7 @@ const Portfolio: GlobalConfig = {
 				},
 				{
 					name: "title",
-					label: "Título",
+					label: "Title",
 					type: "text",
 					admin: {
 						width: "50%",
@@ -35,51 +35,51 @@ const Portfolio: GlobalConfig = {
 		},
 		{
 			name: "about",
-			label: "Sobre mim",
+			label: "About",
 			type: "richText",
 		},
 		{
 			name: "projects",
 			admin: {
-				description: "Projetos mais importantes que já fiz.",
+				description: "About the projects",
 			},
 			labels: {
-				singular: "Projeto",
-				plural: "Projetos",
+				singular: "Project",
+				plural: "Projects",
 			},
 			type: "array",
 			minRows: 1,
 			fields: [
 				{
 					name: "title",
-					label: "Título",
+					label: "Title",
 					type: "text",
 					required: true,
 				},
 				{
 					name: "image",
-					label: "Imagem do Projeto",
+					label: "Project Image",
 					type: "upload",
 					relationTo: "media",
 					admin: {
-						description: "Imagem que representa o projeto.",
+						description: "Image for the project",
 					},
 					required: true,
 				},
 				{
 					name: "githubUrl",
-					label: "URL do GitHub",
+					label: "Github URL",
 					type: "text",
 					required: true,
 				},
 				{
 					name: "deployUrl",
-					label: "URL de Deploy",
+					label: "Deploy URL",
 					type: "text",
 				},
 				{
 					name: "description",
-					label: "Descrição",
+					label: "Description",
 					type: "textarea",
 					required: true,
 				},
@@ -96,7 +96,7 @@ const Portfolio: GlobalConfig = {
 					fields: [
 						{
 							name: "name",
-							label: "Nome",
+							label: "Name",
 							type: "text",
 							required: true,
 						},
@@ -106,34 +106,34 @@ const Portfolio: GlobalConfig = {
 		},
 		{
 			name: "meta",
-			label: "Informações de SEO",
+			label: "Information for SEO",
 			type: "group",
 			fields: [
 				{
 					name: "title",
-					label: "Título do Navegador",
+					label: "Title",
 					type: "text",
 					admin: {
 						description:
-							"Conteúdo que ficará visivel na aba do navegador.",
+							"Title for navigation.",
 					},
 				},
 				{
 					name: "description",
-					label: "Descrição da Página",
+					label: "Description",
 					type: "textarea",
 					admin: {
 						description:
-							"Descrição de até 80 caracteres sobre a página. Importante para otimização de buscadores de sites (SEO)",
+							"Description for sites (SEO)",
 					},
 				},
 				{
 					name: "keywords",
-					label: "Palavras Chaves",
+					label: "Keywords",
 					type: "text",
 					admin: {
 						description:
-							"Algumas palavras chaves da página. Separe por vírgula. Quanto menos genéricas, melhor.",
+							"SEO keywords.",
 					},
 				},
 			],
