@@ -1,9 +1,5 @@
 FROM node:18.8-alpine as builder
 
-ENV NODE_ENV=production
-
-RUN apk add bash
-
 WORKDIR /home/node/app/
 
 COPY package*.json ./
@@ -17,6 +13,8 @@ RUN yarn install
 RUN yarn build
 
 FROM node:18.8-alpine
+
+ENV NODE_ENV=production
 
 WORKDIR /home/node/app/
 
