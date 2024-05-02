@@ -1,6 +1,7 @@
 name: Docker Image CI
 
 on:
+  workflow_dispatch:
   push:
     branches: [ "main" ]
     paths-ignore:
@@ -25,3 +26,5 @@ jobs:
     - name: Build the Docker image
       run: |
         docker build . --file Dockerfile --tag robtec/payloadcms-blank:$(date +%s)
+
+        docker push robtec/payloadcms-blank:$(date +%s)
