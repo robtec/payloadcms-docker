@@ -1,0 +1,25 @@
+FROM node:18.8-alpine as builder
+
+ENV NODE_ENV=production
+
+RUN apk add bash
+
+WORKDIR /home/node/app/
+
+COPY package*.json ./
+
+COPY . .
+
+RUN npm install copyfiles -g
+
+RUN yarn install
+
+RUN yarn build
+
+FROM node:18.8-alpine
+
+WORKDIR /home/node/app/
+
+COPY --from=builder /home/node/app/ /home/node/app/
+
+CMD ["yarn", "serve"]
