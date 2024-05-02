@@ -2,7 +2,7 @@ import { GlobalConfig } from "payload/types";
 import blogWebHook from "./hooks/blogWebHook";
 const AboutBlog: GlobalConfig = {
 	slug: "aboutblog",
-	label: "Página 'Sobre' do Blog",
+	label: "About Blog",
 	access: {
 		read: (): boolean => true,
 	},
@@ -12,39 +12,39 @@ const AboutBlog: GlobalConfig = {
 	fields: [
 		{
 			name: "content",
-			label: "Sobre mim",
+			label: "SEO",
 			type: "richText",
 		},
 		{
 			name: "meta",
-			label: "Informações de SEO",
+			label: "Information for SEO",
 			type: "group",
 			fields: [
 				{
 					name: "title",
-					label: "Título do Navegador",
+					label: "Title",
 					type: "text",
 					admin: {
 						description:
-							"Conteúdo que ficará visivel na aba do navegador.",
+							"Content.",
 					},
 				},
 				{
 					name: "description",
-					label: "Descrição da Página",
+					label: "Description",
 					type: "textarea",
 					admin: {
 						description:
-							"Descrição de até 80 caracteres sobre a página. Importante para otimização de buscadores de sites (SEO)",
+							"Description of site for (SEO)",
 					},
 				},
 				{
 					name: "keywords",
-					label: "Palavras Chaves",
+					label: "Keywords",
 					type: "text",
 					admin: {
 						description:
-							"Algumas palavras chaves da página. Separe por vírgula. Quanto menos genéricas, melhor.",
+							"Keywords for SEO.",
 					},
 				},
 			],
