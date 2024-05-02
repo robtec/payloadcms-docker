@@ -7,8 +7,8 @@ export type CategoryType = {
 const Category: CollectionConfig = {
   slug: "category",
   labels: {
-    singular: "Categoria",
-    plural: "Categorias",
+    singular: "Category",
+    plural: "Categories",
   },
   timestamps: false,
   admin: {
@@ -20,7 +20,7 @@ const Category: CollectionConfig = {
   fields: [
     {
       name: "name",
-      label: "Nome",
+      label: "Name",
       type: "text",
       required: true,
       unique: true,
