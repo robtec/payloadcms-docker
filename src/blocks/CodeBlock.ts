@@ -3,15 +3,15 @@ import { Block } from "payload/types";
 export const CodeBlock: Block = {
 	slug: "codeblock",
 	imageAltText: "A code block image",
-	interfaceName: "Bloco de Código",
+	interfaceName: "Block of Code",
 	labels: {
-		singular: "Bloco de Código",
-		plural: "Blocos de Código",
+		singular: "Block of Code",
+		plural: "Blocks of Code",
 	},
 	fields: [
 		{
 			name: "language",
-			label: "Linguagem",
+			label: "Language",
 			type: "select",
 			options: [
 				{ label: "Typescript", value: "ts" },
@@ -29,7 +29,7 @@ export const CodeBlock: Block = {
 		},
 		{
 			name: "code",
-			label: "Código",
+			label: "Code",
 			type: "textarea",
 		},
 	],
