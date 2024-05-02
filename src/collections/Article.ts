@@ -19,8 +19,8 @@ export type ArticleType = {
 const Article: CollectionConfig = {
 	slug: "articles",
 	labels: {
-		singular: "Artigo",
-		plural: "Artigos",
+		singular: "Article",
+		plural: "Articles",
 	},
 	admin: {
 		useAsTitle: "title",
@@ -35,66 +35,66 @@ const Article: CollectionConfig = {
 	fields: [
 		{
 			name: "title",
-			label: "Título",
+			label: "Title",
 			type: "text",
 			required: true,
 		},
 		{
 			name: "description",
-			label: "Descrição",
+			label: "Description",
 			type: "text",
 			required: true,
 		},
 		{
 			name: "content",
-			label: "Conteúdo",
+			label: "Content",
 			type: "richText",
 			required: true,
 		},
 		{
 			name: "category",
-			label: "Categoria",
+			label: "Category",
 			type: "relationship",
 			relationTo: "category",
 			required: true,
 		},
 		{
 			name: "meta",
-			label: "Informações de SEO",
+			label: "Information for SEO",
 			type: "group",
 			fields: [
 				{
 					name: "seotitle",
-					label: "Título do Navegador",
+					label: "SEO Title",
 					type: "text",
 					admin: {
 						description:
-							"Conteúdo que ficará visivel na aba do navegador.",
+							"Sample seo title.",
 					},
 				},
 				{
 					name: "description",
-					label: "Descrição da Página",
+					label: "Description",
 					type: "textarea",
 					admin: {
 						description:
-							"Descrição de até 80 caracteres sobre a página. Importante para otimização de buscadores de sites (SEO)",
+							"Description for (SEO)",
 					},
 				},
 				{
 					name: "keywords",
-					label: "Palavras Chaves",
+					label: "Keywords",
 					type: "text",
 					admin: {
 						description:
-							"Algumas palavras chaves da página. Separe por vírgula. Quanto menos genéricas, melhor.",
+							"SEO and Search keywords.",
 					},
 				},
 			],
 		},
 		{
 			name: "slug",
-			label: "slug (gerado automaticamente)",
+			label: "slug",
 			type: "text",
 			admin: {
 				position: "sidebar",
